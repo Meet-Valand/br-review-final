@@ -397,10 +397,7 @@ function App() {
     triggerEmojiShower(index);
   };
   const submitReview = async () => {
-    if (currentRating === 0 || reviewText.trim() === "") {
-      alert("Please select a rating and write a review!");
-      return;
-    }
+   
 
     const newReview = {
       rating: currentRating,
@@ -521,10 +518,11 @@ function App() {
           value={reviewText}
           onChange={(e) => setReviewText(e.target.value)}
         />
+        <a href="https://www.google.com/search?q=baskin+robbins+motera&oq=baskin+robbins+motera&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIVCAEQLhgnGMcBGMkDGNEDGIAEGIoFMg0IAhAuGK8BGMcBGIAEMgoIAxAAGJIDGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgYIBxAFGEDSAQkxMjAzNmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x395e839b036bfaab:0xc29f39f71d15ad1f,3,,,,">
         <button className="submit-button" onClick={submitReview}>
           Submit
         </button>
-       
+        </a>
          {/* Emoji Shower */}
          <div className="emoji-shower">
           {emojiShower.map((item) => (
