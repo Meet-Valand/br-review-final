@@ -357,6 +357,7 @@ import { IoLogoInstagram } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import logo from "./assets/Main_Logo.webp";
+import shopLogo from"./assets/shopLogo.png";
 import bg1 from "./assets/Bg1.webp";
 import bg2 from "./assets/Bg2.webp";
 import bg3 from "./assets/Bg3.webp";
@@ -364,9 +365,6 @@ import bg4 from "./assets/Bg4.webp";
 import bg5 from "./assets/Bg5.webp";
 import bg6 from "./assets/Bg6.webp";
 import bg7 from "./assets/Bg7.webp";
-import bg8 from "./assets/Bg8.webp";
-import bg9 from "./assets/Bg9.webp";
-import bg10 from "./assets/Bg10.webp";
 
 function App() {
   const [currentRating, setCurrentRating] = useState(0);
@@ -376,7 +374,7 @@ function App() {
   const [reviewText, setReviewText] = useState("");
   const [reviews, setReviews] = useState([]);
 
-  const bgImg = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10];
+  const bgImg = [bg1, bg2, bg3, bg4, bg5, bg6, bg7];
 
   useEffect(() => {
     axios
@@ -492,7 +490,9 @@ function App() {
     <div className="app-container">
       <header className="header">
         <img src={logo} alt="Logo" className="logo" />
-        <p>The Taste of Happiness!</p>
+       
+       <p className="shopInitial">Anand</p> <img src={shopLogo} alt="logo" className="shopLogo"/><p className="shopEnd">Dessert</p>
+        {/* <p className="slogan">The Taste of Happiness !</p> */}
       </header>
       <section
        className="background"
@@ -552,7 +552,7 @@ function App() {
            <a href="https://wa.me/message/4IO56AZIW656D1" className="wp"><FaWhatsapp/></a>
            <a href="https://maps.app.goo.gl/XJA61C2btZYZqCpm8" className="location"><CiLocationOn /></a>
          </div>
-        <p className="copyright">© 2025 Baskin Robbins(Motera)</p>
+        <p className="copyright">© 2025 Anand Dessert</p>
       </footer>
 
       {/* JSON-LD Structured Data */}
